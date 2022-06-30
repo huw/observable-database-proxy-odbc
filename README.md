@@ -1,19 +1,10 @@
-# @observablehq/database-proxy
+# observable-database-proxy-odbc
 
-The database proxy is a simple Node.js webserver that accepts secure requests from your Observable notebooks, and proxies queries to a PostgreSQL or MySQL database — one that is not necessarily exposed to the web. You can use the database proxy to securely connect to databases on your local computer, on an intranet or within a VPN.
-
-## Installation
-
-Install the database proxy locally or globally with `npm` or `yarn`:
-
-```
-  npm install -g @observablehq/database-proxy
-  yarn global add @observablehq/database-proxy
-```
+The database proxy is a simple Node.js webserver that accepts secure requests from your Observable notebooks, and proxies queries to an ODBC database — one that is not necessarily exposed to the web. You can use the database proxy to securely connect to databases on your local computer, on an intranet or within a VPN.
 
 ## Running the database proxy
 
-Usage: `observable-database-proxy <command> <name> [options]`
+Usage: `yarn dev <command> <name> [options]`
 
 Commands:
 
@@ -23,7 +14,7 @@ Commands:
 - `reset <name>` Reset the shared secret for an existing database proxy configuration
 - `list` List all configured database proxies
 
-When adding a database proxy configuration, a window will be opened to ObservableHQ.com to configure the connection in your Database Settings and set the shared secret. Subsequent starts of the database proxy do not require re-configuration.
+When adding a database proxy configuration, a window will be opened to ObservableHQ.com to configure the connection in your Database Settings and set the shared secret. When you configure the database, select any of the available types (this flag is ignored completely). Subsequent starts of the database proxy do not require re-configuration.
 
 Examples:
 
