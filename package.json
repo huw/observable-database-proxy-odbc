@@ -17,7 +17,8 @@
     "nodemon": "^1.19.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon bin/observable-database-proxy",
+    "dev": "nodemon bin/observable-database-proxy",
+    "start": "yarn dev start odbc --sslcert ./ssl/localhost.pem --sslkey ./ssl/localhost-key.pem",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Huw Evans <yo@huw.cool>",
