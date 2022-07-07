@@ -1,0 +1,22 @@
+diff --git a/index.js b/index.js
+index f4ed901f9656032c4ce9f96db1b72688de380ec4..08323f949fa72800c05da0b6048ee1d43f13237b 100755
+--- a/index.js
++++ b/index.js
+@@ -171,7 +171,7 @@ function check (x, y) {
+   return false
+ }
+ 
+-exports.stringify = function (op, sep, cl, indent) {
++exports.stringify = function (op, sep, cl, indent, replacer) {
+   indent = indent || 0
+   if (op === false){
+     op = ''
+@@ -193,7 +193,7 @@ exports.stringify = function (op, sep, cl, indent) {
+   stream = through(function (data) {
+     anyData = true
+     try {
+-      var json = JSON.stringify(data, null, indent)
++      var json = JSON.stringify(data, replacer, indent)
+     } catch (err) {
+       return stream.emit('error', err)
+     }
