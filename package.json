@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev:base": "nodemon bin/observable-database-proxy",
-    "dev": "yanr dev:base start odbc --sslcert ./ssl/localhost.pem --sslkey ./ssl/localhost-key.pem",
+    "dev": "yarn dev:base start odbc --sslcert ./ssl/localhost.pem --sslkey ./ssl/localhost-key.pem",
     "start": "bin/observable-database-proxy start odbc --sslcert ./ssl/localhost.pem --sslkey ./ssl/localhost-key.pem",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
